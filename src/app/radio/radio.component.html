@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+<button>Search</button>
+
+<input type="text" placeholder={{valuePlaceholder}} [(ngModel)]="inputValue">
+<button id="searchButton" (click)="searchRadio()"> Search</button>
+<ul>
+    @for(radio of filterArray;track $index)  {
+        <li>
+            <a href={{radio.url}}>{{radio.name}}</a>
+        </li>
+    }
+</ul>
+
